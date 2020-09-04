@@ -1,0 +1,7 @@
+*.csproj
+*.sln
+*.suo
+client/Library/
+client/Logs/
+*.cache
+client/Temp/

@@ -1,11 +1,3 @@
-# thor
-thor is a xlua ui extension. feel free to use :) 索尔是一个基于xlua的UI拓展，欢迎入坑  
-预览  
-
-![1](doc/1.png)  
-
-生成样式如下
-```lua
 local bindings = function(table)
 	 table.bindings = {}
 	 table.bindings.Button_Button = table.map:Get('Button_Button'):GetComponent(typeof(CS.UnityEngine.UI.Button))
@@ -40,7 +32,3 @@ local bindings = function(table)
 	 table.bindings.Dropdown_Dropdown = table.map:Get('Dropdown_Dropdown'):GetComponent(typeof(CS.UnityEngine.UI.Dropdown))
 end
 return bindings
-```
-
-* 自动生成代码自动绑定
-* TODO  有生之年
