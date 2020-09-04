@@ -131,8 +131,8 @@ public class GameObjectMapEditor : Editor
             
             using (StreamWriter sw = new StreamWriter(exportPath + target.name + ".lua"))
             {
-                sw.WriteLine("local bindings = function(table)");
-                sw.WriteLine("\t table.bindings = {}");
+                sw.WriteLine("local bindings = function(t)");
+                sw.WriteLine("\t t.bindings = {}");
                 AutoAddMapObject(uis, sw);
                 sw.WriteLine("end");
                 sw.WriteLine("return bindings");
@@ -142,7 +142,7 @@ public class GameObjectMapEditor : Editor
         }
     }
 
-    private string template => "\t table.bindings.{0} = table.map:Get('{0}'):GetComponent(typeof(CS.UnityEngine.UI.{1}))";
+    private string template => "\t t.bindings.{0} = t.map:Get('{0}'):GetComponent(typeof(CS.UnityEngine.UI.{1}))";
     void Add(UIBehaviour button)
     {
         
